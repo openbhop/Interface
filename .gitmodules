@@ -1,0 +1,8 @@
+[submodule "Dependencies/freetype"]
+	path = Dependencies/freetype
+	url = https://github.com/freetype/freetype.git
+	branch = master
+[submodule "Dependencies/yoga"]
+	path = Dependencies/yoga
+	url = https://github.com/facebook/yoga.git
+	branch = main
