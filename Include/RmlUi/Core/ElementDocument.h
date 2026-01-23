@@ -25,6 +25,11 @@ enum class FocusFlag {
 	Keep,     // Focus the element in the document which last had focus.
 	Auto,     // Focus the first tab element with the 'autofocus' attribute or else the document.
 };
+/** ScrollFlag controls whether an element is scrolled into view when showing the document. */
+enum class ScrollFlag {
+	None, // Never scroll.
+	Auto, // Scroll the focused element into view, if applicable.
+};
 
 /**
     Represents a document in the dom tree.
@@ -72,7 +77,7 @@ public:
 	/// Show the document.
 	/// @param[in] modal_flag Flags controlling the modal state of the document, see the 'ModalFlag' description for details.
 	/// @param[in] focus_flag Flags controlling the focus, see the 'FocusFlag' description for details.
-	void Show(ModalFlag modal_flag = ModalFlag::None, FocusFlag focus_flag = FocusFlag::Auto);
+	void Show(ModalFlag modal_flag = ModalFlag::None, FocusFlag focus_flag = FocusFlag::Auto, ScrollFlag scroll_flag = ScrollFlag::Auto);
 	/// Hide the document.
 	void Hide();
 	/// Close the document.
